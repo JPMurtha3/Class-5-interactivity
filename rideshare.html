@@ -47,11 +47,21 @@
         //
 
         console.log("TRIP", trip)
+        var f = trip["driver"]["first_name"]
+        var l = trip["driver"]["last_name"]
+        var FullName = f + " " + l
+        console.log("DRIVER:", FullName)
 
 
+        console.log("STOPS", trip["stops"].length)
+        console.log("FIRST STOP", trip["stops"][0]["destination"])
 
 
-
+        trip["stops"].forEach(function(stops) { // uses the most simple params possible
+            //console.log("---")
+            //console.log(stops);
+            console.log(stops["passenger"])
+        })
 
     </script>
 
